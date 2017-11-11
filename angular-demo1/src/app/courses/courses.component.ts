@@ -8,16 +8,24 @@ import {AutoGrowDirective} from '../auto-grow.directive'
   styleUrls: ['./courses.component.css'],
   encapsulation: ViewEncapsulation.None
   providers: [CoursesService]
-  directives: [AutoGrowDirective]
 })
+
 export class CoursesComponent implements OnInit {
   
-  title = "Title for couses page";
+  title = "Enter a course name: ";
   courses;
+  service;
   
   constructor(coursesService : CoursesService) {
+    this.service = coursesService;
     this.courses = coursesService.getCourses();
   }
 
   ngOnInit() { }
+  
+  public addCourse(course) {
+      this.service.saveCourse(course);
+      this.courses = this.service.getCourses();
+  }
+
 }
