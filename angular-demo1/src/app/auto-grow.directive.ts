@@ -1,10 +1,10 @@
 import { Directive, ElementRef, Renderer } from '@angular/core';
 
 @Directive({
-  selector: '[appAutoGrow]'
+  selector: '[appAutoGrow]',
   host: {
     '(focus)': 'onFocus()',
-    '(blur)': 'onBlur()'
+    '(blur)': 'onBlur()',
   }
 })
 export class AutoGrowDirective {

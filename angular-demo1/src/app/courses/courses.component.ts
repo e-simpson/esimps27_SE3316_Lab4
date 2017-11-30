@@ -6,8 +6,8 @@ import {AutoGrowDirective} from '../auto-grow.directive'
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css'],
-  encapsulation: ViewEncapsulation.None
-  providers: [CoursesService]
+  encapsulation: ViewEncapsulation.None,
+  providers: [CoursesService],
 })
 
 export class CoursesComponent implements OnInit {

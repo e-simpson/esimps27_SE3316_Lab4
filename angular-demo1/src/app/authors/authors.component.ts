@@ -5,8 +5,8 @@ import { AuthorsService } from './authors.service'
   selector: 'app-authors',
   templateUrl: './authors.component.html',
   styleUrls: ['./authors.component.css'],
-  encapsulation: ViewEncapsulation.None
-  providers: [AuthorsService]
+  encapsulation: ViewEncapsulation.None,
+  providers: [AuthorsService],
 })
 export class AuthorsComponent implements OnInit {
   
